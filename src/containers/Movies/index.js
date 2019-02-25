@@ -66,7 +66,7 @@ class Movies extends React.Component {
               onKeyPress={e => (e.key === 'Enter') ? this.searchMovies() : null}
               onBlur={() => this.searchMovies()}
             />
-            <button className="search" onClick={() => this.searchMovies()}><i className="fas fa-search"></i> بحث</button>
+            <button className="search" onClick={() => this.searchMovies()}><i className="fas fa-search"></i></button>
           </div>
         </div>
         {(!toBeWatched.length && !watchedList.length && searchStr) ? <p className="warningMsg">لا يوجد أفلام هنا، من فضلك غّير كلمة البحث</p> : null}
