@@ -18,8 +18,10 @@ class Movies extends React.Component {
   }
   addMovie() {
     const { dispatch } = this.props;
-    dispatch(fetchMovieByName(this.state.newMovieName));
-    this.setState({ newMovieName: '' });
+    if (this.state.newMovieName && this.state.newMovieName.trim()) {
+      dispatch(fetchMovieByName(this.state.newMovieName.trim()));
+      this.setState({ newMovieName: '' });
+    }
   }
   searchMovies() {
     const { dispatch } = this.props;
